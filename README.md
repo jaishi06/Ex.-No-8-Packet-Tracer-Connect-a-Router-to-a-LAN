@@ -16,7 +16,9 @@ ________________________________________<br>
 ________________________________________<br>
 # Network Topology Diagram
 (Insert your Packet Tracer screenshot showing R1—S1—PC1/PC2 and R2—S2—PC3/PC4, plus R1–R2 Serial link S0/0/0.)<br>
-________________________________________<br>
+
+<img width="1906" height="1072" alt="Screenshot 2026-08-20 141947" src="https://github.com/user-attachments/assets/1abce9ec-6a0e-4453-8d84-780871fe4378" />
+
 Addressing Table (from activity)<br>
 Device	Interface	IP Address	Subnet Mask	Default Gateway<br>
 R1	G0/0	192.168.10.1	255.255.255.0	—<br>
@@ -71,7 +73,8 @@ R1(config-if)# no shutdown<br>
 (Use show controllers serial 0/0/0 if you need to confirm DCE/DTE in PT.) <br>
 R2 – LAN Interfaces<br>
 R2# conf t<br>
-R2(config)# interface g0/0<br>
+R2(config)# interface
+g0/0<br>
 R2(config-if)# ip address 10.1.1.1 255.255.255.0<br>
 R2(config-if)# description LAN connection to S2 (PC3)<br>
 R2(config-if)# no shutdown<br>
@@ -112,8 +115,11 @@ ________________________________________<br>
 ________________________________________<br>
 # Output (Attach Screenshots)
 •	show ip interface brief on R1 and R2 (after configuration)<br>
+<img width="1902" height="1016" alt="Screenshot 2026-08-20 141422" src="https://github.com/user-attachments/assets/ff9b397d-76f1-432b-83b8-a9b443bdce34" />
 •	show ip route on R1 and R2<br>
+<img width="1661" height="887" alt="Screenshot 2026-08-20 141121" src="https://github.com/user-attachments/assets/a6896169-361d-463a-a694-9f8463d80640" />
 •	Successful ping PC1 → PC4; R2 → PC2<br>
+<img width="1793" height="1092" alt="Screenshot 2026-08-20 140916" src="https://github.com/user-attachments/assets/7c994fe7-5a48-4db0-987e-36022f6aa408" />
 •	Interface up messages after no shutdown on each link <br>
 ________________________________________<br>
 # Result
